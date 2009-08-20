@@ -7,6 +7,8 @@ main(){
 icalculaImc();
 
 }
+
+//Função
 icalculaImc(){
 var imc;
 var peso;
@@ -19,7 +21,6 @@ peso = double.parse(peso!);
 print("*** digite a altura ***");
 altura = stdin.readLineSync();
 altura = double.parse(altura!);
-
 imc = peso/(altura * altura);
 print (imc);
 
