@@ -1,66 +1,28 @@
+// **** PROGRAMA PARA CALCULAR IMC ***
+import 'dart:async';
 import 'dart:io';
 
+//função principal
 main(){
- 
-//exemplo
-  print("***digite um valor***");
-
-var input = stdin.readLineSync();
-var numero = int.parse(input!);
-
-  print(" ********o valor digitado foi: *******");
-    print(numero);
-
-if (numero > 1000){
-    print(" ***** numero maior que 1000 ****");
-}
-  else 
-{
-    print("*** Numero menor que 1000 ****");
-}
+icalculaImc();
 
 }
-//var hello =" 7 viado safado 2 ";
-//var a;
-//var b;
-//var istrue = 1>0;
+icalculaImc(){
+var imc;
+var peso;
+var altura;
 
-// input e saida de valores para variaveis
+print("*** digite seu peso ***");
+peso = stdin.readLineSync();
+peso = double.parse(peso!);
 
-/*
-// variaveis sintax e semantica
+print("*** digite a altura ***");
+altura = stdin.readLineSync();
+altura = double.parse(altura!);
 
-print (" 7 viado safado");
-print (hello);
-hello = " 7 viado safado 3 ";
-print (hello);
-print ("25");
+imc = peso/(altura * altura);
+print (imc);
 
-//operadores matematicos
-a = 2+2;
-print (a);
-
-//concatenação de texto
-b = "este" + "  +  " + "este aqui";
-print (b);
-
-// estrutura de decisão
-if (a==3)
-{
-  print("verdadeiro");
 }
-else 
-{
-print("false");
-}
-  
-if(istrue)
-{
-print(' is true é verdadeiro');
-}
-
-*/
-
-
 
 
