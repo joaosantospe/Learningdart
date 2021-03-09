@@ -10,7 +10,7 @@ icalculaImc();
 
 //Função
 icalculaImc(){
-var calculaimc;
+double imc;
 var peso;
 var altura;
 
@@ -21,29 +21,39 @@ peso = double.parse(peso!);
 print("*** digite a altura ***");
 altura = stdin.readLineSync();
 altura = double.parse(altura!);
-calculaimc = peso/(altura * altura);
-print (calculaimc);
+imc = calculaimc(peso , altura);
+print (imc);
 print( "************ Resultado ***********");
-imprimeresult(calculaimc);
-
+imprimeresult(imc);
 }
 
-imprimeresult(calculaimc){
-if (calculaimc < 18.5)
-{
-print("Magreza");
+double calculaimc(double peso, double altura){
+double calc = peso / (altura * altura);
+return (calc);
 }
-else if (calculaimc >= 18.5 && calculaimc <=24.9)
+
+
+
+imprimeresult(imc){
+if (imc < 18.5)
 {
-print("Normal");
+  print("Magreza");
+  print("***********************");
 }
-else if (calculaimc > 24.9 && calculaimc <=30)
+else if (imc >= 18.5 && imc <=24.9)
 {
-print("sobrepeso");
+  print("Normal");  
+  print("***********************");
 }
-else if (calculaimc >30)
+else if (imc > 24.9 && imc <=30)
+{
+  print("sobrepeso");
+  print("***********************");
+}
+else if (imc >30)
 {
   print("obeso");
+  print("***********************");
 }
 
 }
