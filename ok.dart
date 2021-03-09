@@ -23,7 +23,12 @@ altura = stdin.readLineSync();
 altura = double.parse(altura!);
 calculaimc = peso/(altura * altura);
 print (calculaimc);
+print( "************ Resultado ***********");
+imprimeresult(calculaimc);
 
+}
+
+imprimeresult(calculaimc){
 if (calculaimc < 18.5)
 {
 print("Magreza");
@@ -40,7 +45,6 @@ else if (calculaimc >30)
 {
   print("obeso");
 }
+
 }
-
-
 
