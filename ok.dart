@@ -32,8 +32,6 @@ double calc = peso / (altura * altura);
 return (calc);
 }
 
-
-
 imprimeresult(imc){
 if (imc < 18.5)
 {
@@ -53,7 +51,7 @@ else if (imc > 24.9 && imc <=30)
 else if (imc >30)
 {
   print("obeso");
-  print("***********************");
+  print("************************");
 }
 
 }
