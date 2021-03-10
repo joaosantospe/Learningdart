@@ -1,10 +1,11 @@
 // **** PROGRAMA PARA CALCULAR IMC ***
-import 'dart:async';
+//import 'dart:async';
 import 'dart:io';
 
 //função principal
 main(){
-icalculaImc();
+  
+  icalculaImc();
 
 }
 
@@ -14,22 +15,27 @@ double imc;
 var peso;
 var altura;
 
-print("*** digite seu peso ***");
-peso = stdin.readLineSync();
-peso = double.parse(peso!);
+  print("*** digite seu peso ***");
+    peso = stdin.readLineSync();
+    peso = double.parse(peso!);
 
-print("*** digite a altura ***");
-altura = stdin.readLineSync();
-altura = double.parse(altura!);
-imc = calculaimc(peso , altura);
-print (imc);
-print( "************ Resultado ***********");
+  print("*** digite a altura ***");
+    altura = stdin.readLineSync();
+    altura = double.parse(altura!); //CONVERSÃO PARA DOUBLE
+    imc = calculaimc(peso , altura);
+  
+  print( "************ Resultado ***********");
+    print (imc);
+  print( "************ Resultado ***********");
+
 imprimeresult(imc);
+
 }
 
 double calculaimc(double peso, double altura){
 double calc = peso / (altura * altura);
 return (calc);
+
 }
 
 imprimeresult(imc){
